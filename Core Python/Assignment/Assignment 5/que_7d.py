@@ -1,0 +1,10 @@
+# (d) S = a + a²/2 + a³/3 + … + a¹⁰/10
+
+a = int(input("Enter value of a: "))
+
+sum = 0
+
+for i in range(1, 11):
+    sum += (a ** i) / i
+
+print("Sum of series =", sum)
