@@ -1,4 +1,10 @@
 # Program to print a pyramid pattern of stars
+        * 
+      * * * 
+    * * * * *
+  * * * * * * *
+* * * * * * * * *
+
 
 n = 5
 for i in range(n):
@@ -6,4 +12,5 @@ for i in range(n):
         print(' ', end = ' ')
     for k in range(2*i+1):
         print('*', end = ' ')
+
     print( )
