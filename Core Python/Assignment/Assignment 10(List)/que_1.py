@@ -7,4 +7,4 @@ sum = 0
 for ele in l:
     sum += ele
 
-print("Sum of elements : ", sum)
+print("Sum of elements : ", sum) 
