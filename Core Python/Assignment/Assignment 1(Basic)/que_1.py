@@ -12,8 +12,6 @@ total_marks = m1 + m2 + m3 + m4 + m5
 
 # Assuming maximum marks is 500 (100 for each subject)
 max_marks = 500
-
-# Calculate percentage
 percentage = (total_marks / max_marks) * 100
 
 # Display results
