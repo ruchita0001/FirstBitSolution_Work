@@ -1,3 +1,5 @@
+# Write a program to reverse the list.
+
 n = int(input("Enter the no. of element : "))
 l = []
 for i in range(n):
