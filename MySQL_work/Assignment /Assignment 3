@@ -197,3 +197,83 @@ mysql> select employee_id, email, department_id, commission_pct
 
 
 6. Write a SQL statement to change the email column of employees table with 'not available' for those employees who belongs to the 'Purchasing' department.
+
+mysql> update employees set email = 'not available'
+    -> where department_id in (
+    -> select department_id from department
+    -> where department_name = 'Purchasing');
+Query OK, 1 row affected (0.02 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> table employees;
++-------------+------------+-----------+---------------+--------------+------------+---------+----------+----------------+------------+---------------+
+| employee_id | first_name | last_name | email         | phone_number | hire_date  | job_id  | salary   | commission_pct | manager_id | department_id |
++-------------+------------+-----------+---------------+--------------+------------+---------+----------+----------------+------------+---------------+
+|         100 | steven     | king      | sking         | 515.123.4567 | 1987-06-17 | ad_pres | 26400.00 |           0.00 |        200 |            10 |
+|         101 | neena      | kochhar   | nkochhar      | 515.123.4568 | 1987-06-18 | ad_vp   | 18700.00 |           0.00 |        200 |            10 |
+|         102 | lex        | de haan   | ldehaan       | 515.123.4569 | 1987-06-19 | ad_vp   | 18700.00 |           0.00 |        200 |            10 |
+|         103 | alexander  | hunold    | ahunold       | 590.423.4567 | 1987-06-20 | it_prog |  9900.00 |           0.00 |        103 |            60 |
+|         104 | bruce      | ernst     | bernst        | 590.423.4568 | 1987-06-21 | it_prog |  6600.00 |           0.00 |        103 |            60 |
+|         105 | david      | austin    | daustin       | 590.423.4569 | 1987-06-22 | it_prog |  5280.00 |           0.00 |        103 |            60 |
+|         106 | valli      | pataballa | vpatabal      | 590.423.4560 | 1987-06-23 | it_prog |  5280.00 |           0.00 |        103 |            60 |
+|         107 | diana      | lorentz   | not available | 590.423.5567 | 1987-06-24 | it_prog |  4620.00 |           0.00 |        114 |            30 |
+|         108 | nancy      | greenberg | not available | 515.124.4569 | 1987-06-25 | sa_man  | 13200.00 |           0.00 |        145 |            80 |
+|         109 | daniel     | faviet    | not available | 515.124.4169 | 1987-06-26 | sa_man  |  9900.00 |           0.00 |        145 |            80 |
+|         110 | aarti      | sharma    | asharma       | 999.111.2222 | 2024-01-01 | it_prog |  5500.00 |           0.00 |        103 |            60 |
+|         111 | rohan      | verma     | not available | 999.111.3333 | 2024-01-02 | sa_rep  |  6600.00 |           0.00 |        145 |            80 |
+|         112 | neha       | patil     | npatil        | 999.111.4444 | 2024-01-03 | hr_rep  |  6050.00 |           0.00 |        101 |            40 |
++-------------+------------+-----------+---------------+--------------+------------+---------+----------+----------------+------------+---------------+
+13 rows in set (0.00 sec)
+
+mysql> table department;
++---------------+------------------+------------+-------------+
+| department_id | department_name  | manager_id | location_id |
++---------------+------------------+------------+-------------+
+|            10 | administration   |        200 | 1700        |
+|            20 | marketing        |        201 | 1800        |
+|            30 | purchasing       |        114 | 1700        |
+|            40 | human resources  |        203 | 2400        |
+|            50 | shipping         |        121 | 1500        |
+|            60 | it               |        103 | 1400        |
+|            70 | public relations |        204 | 2700        |
+|            80 | sales            |        145 | 2500        |
++---------------+------------------+------------+-------------+
+8 rows in set (0.00 sec)
+
+mysql> select department_id
+    -> from department
+    -> where department_name = 'Purchasing';
++---------------+
+| department_id |
++---------------+
+|            30 |
++---------------+
+1 row in set (0.00 sec)
+
+
+7. Write a SQL statement to change the email and commission_pct column of employees table with 'not available' and 0.10 for all employees.
+
+mysql> update employees set email='not available',commission_pct=0.10;
+Query OK, 13 rows affected (0.01 sec)
+Rows matched: 13  Changed: 13  Warnings: 0
+
+mysql> select employee_id, email, commission_pct
+    -> from employees;
++-------------+---------------+----------------+
+| employee_id | email         | commission_pct |
++-------------+---------------+----------------+
+|         100 | not available |           0.10 |
+|         101 | not available |           0.10 |
+|         102 | not available |           0.10 |
+|         103 | not available |           0.10 |
+|         104 | not available |           0.10 |
+|         105 | not available |           0.10 |
+|         106 | not available |           0.10 |
+|         107 | not available |           0.10 |
+|         108 | not available |           0.10 |
+|         109 | not available |           0.10 |
+|         110 | not available |           0.10 |
+|         111 | not available |           0.10 |
+|         112 | not available |           0.10 |
++-------------+---------------+----------------+
+13 rows in set (0.00 sec)
