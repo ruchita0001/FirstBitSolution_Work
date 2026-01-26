@@ -3,18 +3,21 @@
 import random
 correct_userid = "admin"
 correct_password = "1234"
-
 userid = input("Enter UserID: ")
 password = input("Enter Password: ")
 
 if userid == correct_userid and password == correct_password:
+    print("Login Successful")
+    
     captcha = random.randint(1000, 9999)
-    print("Captcha:", captcha)
-    user_input = int(input("Enter the captcha number shown above: "))
-    if user_input == captcha:
-        print("Login successful! Verification complete.")
+    print("Enter this number to continue:", captcha)
+    user_captcha = int(input("Enter the number: "))
+ 
+    if user_captcha == captcha:
+        print("Verification Successful")
     else:
-        print("Failed! Captcha did not match.")  
+        print("Verification Failed.")   
 else:
     print("Invalid UserID or Password")
+
 
