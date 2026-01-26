@@ -3,23 +3,21 @@
     # b. Senior citizen (above 59) = 50% discount
     # c. Others need to pay full.
 
-# Initialize total amount
 total_amount = 0
-
-# Loop to input age and ticket amount for 5 people
-for i in range(5):
-    age = int(input(f"Enter age of person {i+1}: "))
-    ticket = float(input(f"Enter ticket amount for person {i+1}: "))
-
-    # Apply discount based on age
+for i in range(1, 6):
+    print("Person", i)
+    age = int(input("Enter age: "))
+    ticket = float(input("Enter ticket amount: "))
     if age < 12:
-        amount = ticket * 0.7      # 30% discount
+        final = ticket - (ticket * 0.30)
+        print("Child discount applied") 
     elif age > 59:
-        amount = ticket * 0.5      # 50% discount
+        final = ticket - (ticket * 0.50)
+        print("Senior citizen discount applied") 
     else:
-        amount = ticket            # No discount
+        final = ticket
+        print("Full ticket price")
+    print("Amount to pay:", final)
+    total_amount += final
 
-    total_amount += amount
-
-# Display total amount
-print("Total amount to be paid for all 5 people:", total_amount)
+print("Total amount for all 5 people =", total_amount)
