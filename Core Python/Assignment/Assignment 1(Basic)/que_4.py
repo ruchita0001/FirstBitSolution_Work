@@ -1,13 +1,9 @@
 # Write a program to enter P, T, R and calculate simple Interest.
 
-# SI = (P * T * R) / 100
-# Where P = Principal, T = Time (in years), R = Rate (per annum)
+P = int(input("Enter Principal: "))
+T = int(input("Enter Time in years: "))
+R = int(input("Enter Rate per annum: "))
 
-P = int(input("Enter Principal (P): "))
-T = int(input("Enter Time in years (T): "))
-R = int(input("Enter Rate per annum (R): "))
+SI = (P * T * R) / 100
 
-# Calculate Simple Interest
-Simple_Interest = (P * T * R) / 100
-
-print('Simple_Interest:', Simple_Interest)
+print('Simple Interest:', SI)
