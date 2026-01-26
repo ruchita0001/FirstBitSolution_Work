@@ -1,11 +1,7 @@
 # WAP to calculate selling price of book based on cost price and discount.
 
-#Formula:
-#Selling Price = Cost Price − Discount
+CP = int(input("Enter cost price: "))
+D = int(input("Enter discount: "))
 
-cost_price = int(input("Enter cost price: "))
-discount = int(input("Enter discount: "))
-
-selling_price = cost_price - discount
-
-print("Selling Price =", selling_price)
+SP = CP - D
+print("Selling Price =", SP)
