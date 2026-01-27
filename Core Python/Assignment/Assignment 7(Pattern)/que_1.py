@@ -1,14 +1,14 @@
 # diamond / hollow hourglass star pattern
-    *
-   * *
-  *   *
- *     *
-*       *
-*       *
- *     *
-  *   *
-   * *
-    *
+#     *
+#    * *
+#   *   *
+#  *     *
+# *       *
+# *       *
+#  *     *
+#   *   *
+#    * *
+#     *
 
 n = 5  
 # Upper half
