@@ -1,14 +1,14 @@
 # pyramid of stars increasing then decreasing
 
-* 
-* * 
-* * *
-* * * *
-* * * * *
-* * * *
-* * *
-* *
-*
+# * 
+# * * 
+# * * *
+# * * * *
+# * * * * *
+# * * * *
+# * * *
+# * *
+# *
 
 n = 5  
 # Top half (increasing stars)
