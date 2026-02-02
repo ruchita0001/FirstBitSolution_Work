@@ -4,16 +4,14 @@
 # c. 1^1 + 2^2 + 3^3+ ...... n^n
 
 # a. 1+ 2 + 3 + 4+..... + n
-def sumOfSeries(n):
+n = int(input("Enter value of n: "))
+
+def sum_n(n):
     sum = 0
-
-    for i in range(1,n+1):
-        sum = sum + i
-
+    for i in range(1, n+1):
+        sum += i
     return sum
 
-n = int(input("Enter the value of n : "))
+print("Sum of numbers: ",sum_n(n))
 
-res = sumOfSeries(n)
-
-print(f"Sum of Series upto {n} is {res}")
+#print(f"Sum of number {n} is {sum_n(n)}")
