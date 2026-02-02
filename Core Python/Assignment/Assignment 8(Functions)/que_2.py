@@ -1,10 +1,10 @@
 # WAP to calculate area of circle
 
-def circleArea(r):
+n = int(input("radius of circle: "))
+
+def circle_area(r):
     area = 3.142 * (r**2)
     return area
 
-
-radius = int(input("Enter radius of circle : "))
-res = circleArea(radius)
-print("Area of circle : ", res)
+res = circle_area(n)
+print("Area of circl: ", res)
