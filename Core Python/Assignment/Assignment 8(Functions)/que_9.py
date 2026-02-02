@@ -1,20 +1,22 @@
 #WAP to check if entered number is a palindrome or not.
 
-def reverseNumber(num):
-    temp = num
+n = int(input("Enter a number: "))
+
+def is_palindrome(n):
+    original = n
     rev = 0
-    while(num > 0):
-        d = num % 10
-        rev = rev * 10 + d 
-        num = num // 10
-
-    if temp == rev:
-        return "Number is palindrome"
+    
+    while n>0:
+        digit = n % 10
+        rev + rev * 10 + digit
+        n = n // 10
+        
+    if original == rev:
+        return True
     else:
-        return "Number is not palindrome"
+        return False
 
-
-
-num = int(input("Enter the Number : "))
-
-print(reverseNumber(num))
+if is_palindrome(n):
+    print("Palindrome number")
+else:
+    print("Not a Palindrome number")
