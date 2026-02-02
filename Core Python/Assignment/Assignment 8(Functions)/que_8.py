@@ -1,18 +1,15 @@
 #WAP find reverse of a number
 
-def reverseNumber(num):
- 
-    rev = 0
-    while(num > 0):
-        d = num % 10
-        rev = rev * 10 + d 
-        num = num // 10
+n = int(input("Enter a number: "))
 
+def rev_number(n):
+    rev = 0
+    while n > 0:
+        d = n % 10
+        rev = rev * 10 + d
+        n = n // 10 
+     
     return rev
 
-
-num = int(input("Enter the Number : "))
-
-res = reverseNumber(num)
-
-print(f"Reverse of {num} = {res}")
+res = rev_number(n)
+print(f"Reverse of {n} = {res}")
