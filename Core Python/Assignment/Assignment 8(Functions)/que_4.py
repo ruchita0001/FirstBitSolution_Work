@@ -1,16 +1,12 @@
 # Sum of all odd numbers between 1 to n
 
-def sumOfOdd(n):
-    sum = 0
+n = int(input("Enter value of n: "))
 
-    for i in range(1,n+1):
-        if i % 2 != 0:
-            sum += i 
-        
-    return sum 
+def sum_odd(n):
+    total=0
+    for i in range(1, n+1):
+        if i%2 != 0:
+            total += i
+    return total
 
-n = int(input("Enter the value of n : "))
-
-res = sumOfOdd(n)
-
-print(f"Sum of odd numbers between 1 to {n} is {res}")
+print(f"sum of odd number {n} is {sum_odd(n)}")
