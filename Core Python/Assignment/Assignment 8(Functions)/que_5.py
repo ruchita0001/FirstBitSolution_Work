@@ -1,20 +1,19 @@
 # Sum of all prime numbers between 1 to n
 
-def sumOfPrime(n):
-    sum = 0
+n = int(input("Enter value of n: "))
 
+def sum_prime(n):
+    total = 0
     for num in range(2, n+1):
-        
-        for i in range(2, (num // 2) + 1):
+        prime = True
+        for i in range(2, num):
             if num % i == 0:
+                prime = False
                 break
-        else:
-            sum = sum + i
+        
+        if prime:
+            total += num
+    
+    return total
 
-    return sum
-
-n = int(input("Enter the value of n : "))
-
-res = sumOfPrime(n)
-
-print(f"Sum of Prime Numbers between 1 to {n} is {res}")
+print("sum of prime numbers: ", sum_prime(n))
