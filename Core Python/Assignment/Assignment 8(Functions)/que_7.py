@@ -1,18 +1,14 @@
 # WAP to find sum of digits of a number.
 
-def sumOfDigit(num):
+n = int(input("Enter a number: "))
+
+def sum_digit(n):
     sum = 0
-
-    while(num > 0):
-        d = num % 10
+    while(n>0):
+        d = n%10
         sum += d
-        num = num // 10
-
+        n = n // 10
+        
     return sum
-
-
-num = int(input("Enter the Number : "))
-
-res = sumOfDigit(num)
-
-print(f"The sum of digits of {num} is {res}")
+res = sum_digit(n)
+print(f"The sum of digit of {n} is {res}")
