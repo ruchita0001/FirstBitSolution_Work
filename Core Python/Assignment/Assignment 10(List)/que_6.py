@@ -1,15 +1,15 @@
 #WAP to remove duplicates from the list.
 
-li = [1, 2, 2, 3, 4, 3, 5]
+li = [10, 20, 10, 30, 20, 40]
 new = []
 
 for i in li:
     found = False
     for j in new:
-        if i == j:
+        if (i == j):
             found = True
             break
     if not found:
         new.append(i)
 
-print(new)
+print("After removing duplicates:", new)
