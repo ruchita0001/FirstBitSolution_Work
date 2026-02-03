@@ -1,12 +1,7 @@
 # Write a program to find sum of all elements of list
-
-n = int(input("Enter the no. of element : "))
-l = []
-for i in range(n):
-    l.append(int(input()))
-
+li = [10, 20, 30, 40]
 sum = 0
-for ele in l:
-    sum += ele
+for i in range(0, len(li)):
+    sum = sum + li[i]
 
-print("Sum of elements : ", sum) 
+print("Sum of all elements of list =", sum)
