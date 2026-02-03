@@ -1,10 +1,10 @@
-#WAAP to print list after removing even numbers.
+#WAP to print list after removing even numbers.
 
-li = [1, 2, 3, 4, 5, 6]
-new_list = []
+li = [10, 15, 20, 25, 30]
+odd = []
 
 for i in li:
-    if i % 2 != 0:
-        new_list.append(i)
+    if (i % 2 != 0):
+        odd.append(i)
 
-print("After removing even:", new_list)
+print("List after removing even numbers:", odd)
