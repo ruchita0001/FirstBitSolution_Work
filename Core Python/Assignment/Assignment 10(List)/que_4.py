@@ -1,13 +1,12 @@
 # Write a program to reverse the list.
 
-n = int(input("Enter the no. of element : "))
-l = []
-for i in range(n):
-    l.append(int(input()))
+li = [10, 20, 30, 40]
+rev = []
 
-print("Original List : ",l)
+i = len(li) - 1  
 
-for i in range(n//2):
-    l[i], l[n-1-i] = l[n-1-i], l[i]
+while (i >= 0):
+    rev.append(li[i])
+    i -= 1
 
-print("Reverse List : ", l)
+print("Reversed List =", rev)
