@@ -1,14 +1,15 @@
 # WAP to find the second largest element in the list.
-lst = [12, 45, 7, 89, 23, 56]
+li = [40, 90, 60, 20, 80, 10, 70]
 
-largest = lst[0]
-second_largest = lst[0]
-
-for num in lst:
-    if num > largest:
-        second_largest = largest
-        largest = num
-    elif num > second_largest and num != largest:
-        second_largest = num
-
-print("Second largest element is:", second_largest)
+max = li[0]
+smax = 0
+tmax = 0
+for i in range(1, len(li)):
+    if (li[i] > max):
+        smax = max
+        max = li[i]
+    elif(li[i] > smax):
+        smax = li[i]
+    
+print('maximum element is:', max)
+print('second maximum element is:', smax)
