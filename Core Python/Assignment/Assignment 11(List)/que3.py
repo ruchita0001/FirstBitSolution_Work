@@ -10,8 +10,8 @@ def sort_by_second(li):
 
     return li
 
-
 li = [[1, 3], [4, 1], [2, 2], [5, 0]]
 
 result = sort_by_second(li)
 print("Sorted List:", result)
+
